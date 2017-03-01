@@ -25,6 +25,6 @@ The best way to install npm is to install node using the node.js installer "http
 
 * To run a local server and watcher where build is run every time there is a change in the files, run "npm start" from project root
 
-* Navigate in browser to "http://localhost:3000" and see the changes
+* Navigate in browser to http://localhost:3000 and see the changes
 
 * Press "Control + C" then "Y" then "Enter" to terminate webpack-dev-server
