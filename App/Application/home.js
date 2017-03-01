@@ -5,7 +5,7 @@ import Module_Header from "../Module/header";
 import Module_Content from "../Module/content";
 
 export default class Home extends Application { 
-    constructor (name) {
+    constructor (name) { 
         super(name);
     }
 
