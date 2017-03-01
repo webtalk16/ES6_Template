@@ -1,7 +1,8 @@
 ﻿import Application from "../Classes/Application";
 
-import Module_Content from "../Module/content";
+import Module_MainWrap from "../Module/mainWrap";
 import Module_Header from "../Module/header";
+import Module_Content from "../Module/content";
 
 export default class Home extends Application { 
     constructor (name) {
@@ -14,11 +15,13 @@ export default class Home extends Application {
     }
 
     initModules (){
-        let moduleContent = new Module_Content("Content");
-        let moduleHeader = new Module_Header("Header");
+        let MainWrap = new Module_MainWrap("MainWrap");
+        let Header = new Module_Header("Header");
+        let Content = new Module_Content("Content");
 
-        moduleContent.init();
-        moduleHeader.init();
+        MainWrap.init();
+        Header.init();
+        Content.init();
 
     }
 

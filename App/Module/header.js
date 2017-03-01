@@ -10,9 +10,9 @@ export default class Module_Header extends Module {
     }
 
     init(){
-        this.component = new Component_Header("Header");
+        this.component = new Component_Header(this.name);
         this.component.init();
-        //this.component.renderHtml(this.component, "hidden");
+        //this.component.renderHtml(this.component);
 
         console.log("Global.Appname = " + Global.Appname);
 

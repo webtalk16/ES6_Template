@@ -10,7 +10,7 @@ export default class Module_Content extends Module {
     }
 
     init(){
-        this.component = new Component_Content("Content");
+        this.component = new Component_Content(this.name);
         this.component.init();
 
         Global.Appname = "Good New Name";
