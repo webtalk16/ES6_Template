@@ -1,7 +1,26 @@
 ﻿import Component from "../Prototype/Component";
-import Global from "../Prototype/Global";
+import View from "../Prototype/View";
 
-import View_Content from "./content.view";
+import { Global } from "../Common/Global";
+
+function initView(view) {
+    view.tagName = "AppContent";
+    view.cssClass = "hidden";
+    view.template = {
+
+        html: () => {
+            let html = [];
+
+            html.push(`<div id="${view.name}Main">`);
+            html.push(`     <div id="${view.name}Container">Content view</div>`);
+            html.push(`</div>`);
+
+            return html.join("");
+        }
+    }
+
+    view.renderHtml(view);
+}
 
 export default class Component_Content extends Component {
 
@@ -9,13 +28,12 @@ export default class Component_Content extends Component {
         super(name);
     }
 
-    init(){
-        this.View = new View_Content(this.name);
-        this.View.init();
-        this.View.renderHtml(this.View);
+    init() {
+        this.View = new View(this.name);
+        initView(this.View);
 
-        Global.Appname = "Good New Name";
-        console.log("Global.Appname = " + Global.Appname);
+        Global.Members.Appname = "Good New Name";
+        console.log("Global.Appname = " + Global.Members.Appname);
     }
 
 }

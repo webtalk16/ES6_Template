@@ -1,6 +1,26 @@
 ﻿import Component from "../Prototype/Component";
-import View_MainWrap from "./mainWrap.view";
+import View from "../Prototype/View";
 
+function initView(view) {
+    view.tagName = "MainWrap";
+    view.cssClass = "hidden";
+    view.template = {
+
+        html: () => {
+            let html = [];
+            html.push(`<div id="${view.name}Main">`);
+            html.push(`     <div id="${view.name}Container">`);
+            html.push(`         <AppHeader></AppHeader>`);
+            html.push(`         <AppContent></AppContent>`);
+            html.push(`     </div>`);
+            html.push(`</div>`);
+
+            return html.join("");
+        }
+    }
+
+    view.renderHtml(view);
+}
 export default class Component_MainWrap extends Component {
 
     constructor(name) {
@@ -8,9 +28,8 @@ export default class Component_MainWrap extends Component {
     }
 
     init(){
-        this.View = new View_MainWrap(this.name);
-        this.View.init();
-        this.View.renderHtml(this.View);
+        this.View = new View(this.name);
+        initView(this.View);
     }
 
 }
