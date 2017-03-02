@@ -1,21 +1,21 @@
-﻿import Component from "../Classes/Module";
+﻿import View from "../Prototype/View";
 
-export default class Component_Content extends Component {
+export default class View_Content extends View {
 
     constructor(name) {
         super(name);
     }
 
     init() {
-        this.selector = "AppContent";
+        this.tagName = "AppContent";
         this.cssClass = "hidden";
         this.template = {
 
-            html: function () {
+            html: () => {
                 let html = [];
 
                 html.push('<div id="' + this.name + 'Main">');
-                html.push('     <div id="' + this.name + 'Container"></div>');
+                html.push('     <div id="' + this.name + 'Container">Hello Content view</div>');
                 html.push('</div>');
 
                 return html.join("");

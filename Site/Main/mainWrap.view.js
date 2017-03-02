@@ -1,20 +1,20 @@
-﻿import Component from "../Classes/Module";
+﻿import View from "../Prototype/View";
 
-export default class Component_MainWrap extends Component {
+export default class View_MainWrap extends View {
 
-    constructor(name, selector) {
-        super(name, selector);
+    constructor(name) {
+        super(name);
 
     }
-    //renderHtml (component, className){
-    //    super.renderHtml(component, className);
+    //renderHtml (view, className){
+    //    super.renderHtml(view, className);
     //}
     init() {
-        this.selector = "MainWrap";
+        this.tagName = "MainWrap";
         this.cssClass = "hidden";
         this.template = {
 
-            html: function(){
+            html: () => {
                 let html = [];
                 html.push('<div id="' + this.name + 'Main">');
                 html.push('     <div id="' + this.name + 'Container">');
