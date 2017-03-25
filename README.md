@@ -21,7 +21,7 @@ The best way to install npm is to install node using the node.js installer "http
 
 -- Developement Environment Instructions --
 
-* Make changes as needed to the project and then run "npm run build" from project root --- the project to ready to go :)
+* Make changes as needed to the project and then run "npm run build" from project root --- the project is ready to go :)
 
 * To run a local server and watcher where build is run every time there is a change in the files, run "npm start" from project root
 
