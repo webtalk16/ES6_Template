@@ -1,5 +1,5 @@
 # ES6_Template
-Pure ES6 base MVC Project Template
+Pure ES6 base MVC project template
 
 
 -- Install Instructions --
@@ -14,7 +14,7 @@ The best way to install npm is to install node using the node.js installer "http
 
 -- Initial Build Instructions --
 
-* From command prompt, navigate to directory where ES6_Template root folder was installed (for ex. "cd C:\Users\USER_NAME\Source\Repos\ES6_Template"")
+* From command prompt, navigate to directory where ES6_Template root folder was downloaded (for ex. "cd C:\Users\USER_NAME\Source\Repos\ES6_Template"")
 
 * From that location run "npm run install"
 
